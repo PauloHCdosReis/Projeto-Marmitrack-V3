@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import MainProvider from '@/providers'
 
 const UniviaProUltra = localFont({
   src: './fonts/UniviaPro-Ultra.ttf',
@@ -38,11 +39,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${UniviaProUltra.variable} ${UniviaProRegular.variable} ${UniviaProBold.variable} antialiased`}
+        className={`bg-neutral-50 dark:bg-neutral-950 ${UniviaProUltra.variable} ${UniviaProRegular.variable} ${UniviaProBold.variable} antialiased`}
       >
-        {children}
+        <MainProvider>{children}</MainProvider>
       </body>
     </html>
   )
