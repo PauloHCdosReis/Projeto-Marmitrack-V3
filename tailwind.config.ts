@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'univia-ultra': ['var(--font-univiapro-ultra)'],
+        'univia-bold': ['var(--font-univiapro-bold)'],
+        'univia-regular': ['var(--font-univiapro-regular)'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
